@@ -1,1 +1,3 @@
-# Ngrok + Static Flask Example for Giant Swarm
+## Giant Swarming Static Files with Flask and Ngrok
+
+Documentation and video forthcoming.
