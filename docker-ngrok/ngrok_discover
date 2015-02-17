@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ "$1" = "/bin/sh" ]; then
+  shift
+fi
+
+ARGS="-config /.ngrok -log stdout $FLASK_PORT_5000_TCP_ADDR:$FLASK_PORT_5000_TCP_PORT" 
+
+exec /bin/ngrok $ARGS

@@ -1,0 +1,383 @@
+body {
+  margin: 0;
+  font-family: Futura, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+  background: #111414;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+/* wrapper for scrolling */
+div#wrapper {
+  overflow: hidden;
+  position: absolute;
+  height: 2000px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #111414;
+  background: #111414 no-repeat center top -moz-radial-gradient(top,#2a2e30,#111414);
+  background: #111414 no-repeat top center -webkit-gradient(radial, center top, 0, center top, 600, from(#2a2e30), to(#111414));
+}
+
+body.with-initial-animation div#wrapper {
+  -webkit-transform-origin: 50% 0;
+  -webkit-transform: scale(1.5);
+  opacity: 0;
+}
+
+div#header {
+  position: absolute;
+  z-index: 1001;
+}
+
+div#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background: #222;
+  border-top: 1px solid #333;
+  z-index: 9999;
+  padding: 30px 0 0 0;
+  cursor: pointer;
+  box-shadow: inset 0px 5px 10px rgba(0,0,0,0.25);
+}
+
+div#footer div.image {
+  float: left;
+  margin: -20px 20px 0 15px;
+  width: 221px;
+  height: 100px;
+  background: url(pulse.png?20140930);
+  background-size: 100% 100%;
+  color: transparent;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+div#footer #design {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  font-size: 12px;
+}
+
+div#footer small {
+  display: none;
+}
+
+canvas {
+  position: absolute;
+}
+
+h1,h2,h3 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 1.75em;
+  line-height: 1.5em;
+  float: left;
+  margin: 0;
+  padding: 10px 0 0 10px;
+}
+
+h2 {
+  float: left;
+  font-size: 0.75em;
+  line-height: 1.4em;
+  width: 160px;
+  padding: 13px 0 0 20px;
+}
+
+h3 {
+  float: right;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  padding: 14px 10px 0 0;
+}
+
+a {
+  color: #fff;
+}
+
+#dates {
+  position: absolute;
+  top: 0;
+}
+
+#dates div {
+  position: absolute;
+  text-transform: lowercase;
+  font-size: 0.7em;
+  line-height: 2em;
+  color: #fff;
+  text-align: center;
+}
+
+#timezones {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  -webkit-transform: translate3d(0,0,0);
+  text-rendering: optimizeLegibility;
+}
+
+#timezones div {
+  position: absolute;
+  font-size: 1em
+  line-height: 1em;
+  width: 200px;
+}
+
+#timezones div small {
+  font-size: 0.7em;
+  line-height: 1em;
+  color: #666;
+}
+
+#times {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  margin-left: 15px;
+  z-index: 1000;
+}
+
+#times div {
+  font-size: 1em;
+  line-height: 1em;
+  position: absolute;
+  width: 150px;
+}
+
+#action_icon svg {
+  fill: #fff;
+}
+
+.touch {
+  display: none;
+}
+
+body.supports-touch .touch {
+  display: inherit;
+}
+
+body.standalone #tap_to_add {
+  display: none;
+}
+
+body.chrome *, body.android * {
+  text-rendering: auto !important;
+}
+
+#now, #cnow {
+  position: relative;
+  clear: both;
+  top: 70px;
+  background: #525;
+  background-image: -moz-linear-gradient(top, #414, #525);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#414), to(#525));
+  width: 80px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 4px 10px 8px;
+  text-align: center;
+  height: 20px;
+  font:0.9em/0.9em Futura, Helvetica, Arial, sans-serif;
+  color: #fff;
+  margin-left: -50px;
+  margin-bottom: 20px;
+  z-index:10;
+}
+#now {
+  color: #000;
+  margin-top: -52px;
+  background: #cce93f;
+  background-image: -moz-linear-gradient(top, #b8ff41, #d3ff59);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b8ff41), to(#d3ff59));
+  padding: 4px 5px 8px 15px;
+}
+#now div.drag1, #now div.drag2 {
+  position: absolute;
+  width:3px;
+  top: 5px;
+  left: 8px;
+  height: 22px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #3fba07;
+  background-image:
+    -webkit-gradient(linear, left top, left bottom, color-stop(0.0, rgba(63,186,7,0.5)), color-stop(1.0, rgba(110,216,27,0.5))),
+    -webkit-gradient(linear, left top, right top, color-stop(0.0, #3fba07), color-stop(0.5, #6ed81b), color-stop(1.0, #3fba07));
+}
+#now div.drag2 {
+  left: 13px;
+}
+#now span.info, #cnow span.info {
+  display: block;
+  font: 0.6em/1.2em Futura, Helvetica, Arial, sans-serif;
+}
+#line, #cline {
+  position: absolute;
+  left: 49px;
+  background: #d3ff59;
+  width: 2px;
+  height: 0px;
+  top: 32px;
+}
+#cline {
+  background: #525;
+}
+
+.button {
+  width: 44px;
+  height: 44px;
+  x-border: 1px solid #000;
+  x-border-radius: 8px;
+  x-border: 1px solid red;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  text-shadow: 0px -1px #000;
+  x-background-image: -webkit-gradient(linear, left top, left bottom, from(#aaa), color-stop(0.05, #888), color-stop(0.5, #555), color-stop(0.501, #444), to(#393939));
+}
+
+#select_timezones_button {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  padding: 7px 0 0 9px;
+  width: 35px;
+  height: 35px;
+  display: none;
+}
+
+#share_button {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 8px;
+  padding: 2px 0 0 6px;
+  width: 64px;
+  height: 40px;
+  x-background-image: -webkit-gradient(linear, left top, left bottom, from(#a6e6fa), color-stop(0.05, #55c8e4), color-stop(0.5, #3cafc5), color-stop(0.501, #3399b5), to(#3399b5));
+}
+
+#select_timezones  {
+  display: none;
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  width: 30px;
+  height: 40px;
+  border: 0;
+  -webkit-appearance: button;
+  background: transparent;
+  color: transparent;
+  outline: none;
+  border-radius: 0;
+  xvisibility: hidden;
+}
+
+#shortcut_link {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+body.supports-touch #select_timezones  {
+  display: block;
+}
+
+body.supports-touch #select_timezones_button {
+  display: block;
+}
+
+body.supports-touch #shortcut_link {
+  top: 18px;
+  right: 50px;
+}
+
+.twitter-share-button {
+  position: absolute;
+  left: 450px;
+  top: 19px;
+}
+
+@media screen and (max-device-width: 480px) {
+  h1 {
+    font-size: 1em;
+    width: 300px;
+    line-height: 2.25em;
+  }
+  h2 {
+    display: none;
+  }
+  h3 {
+    font-size: 0.7em;
+  }
+  h3 .optional {
+    display: none;
+  }
+  #select_timezones  {
+    display: block;
+  }
+  #select_timezones_button {
+    display: block;
+  }
+
+  #shortcut_link {
+    top: 18px;
+    right: 50px;
+  }
+
+  div#footer {
+    text-align: center;
+    font-size: 0.8em;
+    height: 190px;
+  }
+
+  div#footer small {
+    display: none;
+  }
+
+  div#footer div.image {
+    float: none;
+    display: block;
+    margin: 0px auto 10px;
+  }
+
+  div#footer #design {
+    position: relative;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    top: 0;
+    left: 0;
+  }
+
+  .twitter-share-button {
+    display: none;
+  }
+}

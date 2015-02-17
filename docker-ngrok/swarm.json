@@ -1,0 +1,29 @@
+{
+  "app_name": "ngrok",
+  "services": [
+    {
+      "service_name": "ngrok",
+      "components": [
+        {
+          "component_name": "ngrok-component",
+          "image": "registry.giantswarm.io/$username/ngrok",
+          "ports": [4040],
+          "dependencies": [
+            {
+              "name": "flask",
+              "port": 5000
+            }
+          ]
+        },
+        {
+          "component_name": "flask",
+          "image": "registry.giantswarm.io/$username/flask-static",
+          "ports": ["5000/tcp"],
+          "domains": {
+            "timezones.gigantic.io": "5000"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html manifest=everytimezone.manifest>
+
+<head>
+  <title>Timezones</title>
+  <meta http-equiv=content-type content="text/html; charset=utf-8">
+  <meta http-equiv=imagetoolbar content=false>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel=stylesheet href="everytimezone.css">
+</head>
+
+<body id="body" onselectstart="return false">
+  <div id="wrapper">
+    <canvas id="canvas"></canvas>
+    <div id="dates"></div>
+
+    <div id="header">
+      <h1>Timezones for San Francisco and Köln</h1>
+
+      <div class="button" id="select_timezones_button">
+        <span id="edit_icon"></span>
+      </div>
+      <select multiple name="timezones" id="select_timezones">
+      </select>
+      <a id="shortcut_link" href="#">tap & hold to share</a>
+    </div>
+
+    <div id="timezones"></div>
+    <div id="times"></div>
+
+    <div id="cnow">
+      <span id="clocaltime"></span>
+      <span class="info">current local time</span>
+      <div id="cline"></div>
+    </div>
+    
+    <div id="now">
+      <div class="drag1"></div>
+      <div class="drag2"></div>
+      <span id="localtime"></span>
+      <span class="info">your local time</span>
+      <div id="line"></div>
+    </div>
+  </div>
+ <div id="footer">
+    <div class="image"></div>
+    <div id="design">
+      <span class="optional">Designed by <a href=http://twitter.com/amyhoy>Amy Hoy</a> &amp; dev by <a href=http://twitter.com/thomasfuchs>Thomas Fuchs</a></span><br class="optional">
+      <span class="touch" id="tap_to_add"><span id="action_icon"></span></span>
+    </div>
+  </div>
+  </div>
+  <script src="keymaster.min.js"></script>
+  <script src="data.js"></script>
+  <script src="everytimezone.min.js"></script>
+
+</body>
+</html>
+

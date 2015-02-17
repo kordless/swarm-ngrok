@@ -1,0 +1,19 @@
+
+{
+  "app_name": "flask-static",
+  "services": [
+    {
+      "service_name": "flask-static-service",
+      "components": [
+        {
+          "component_name": "flask",
+          "image": "registry.giantswarm.io/kord/flask-static",
+          "ports": ["5000/tcp"],
+          "domains": {
+            "timezones.gigantic.io": "5000"
+          }
+        }
+      ]
+    }
+  ]
+}
