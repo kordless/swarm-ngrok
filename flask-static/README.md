@@ -1,2 +1,2 @@
-# Serving Static Files with Giant Swarm
+## Serve Static Files with Giant Swarm
 
