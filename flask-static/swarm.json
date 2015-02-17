@@ -7,10 +7,10 @@
       "components": [
         {
           "component_name": "flask",
-          "image": "registry.giantswarm.io/kord/flask-static",
+          "image": "registry.giantswarm.io/$username/flask-static",
           "ports": ["5000/tcp"],
           "domains": {
-            "timezones.gigantic.io": "5000"
+            "$username-static.gigantic.io": "5000"
           }
         }
       ]
