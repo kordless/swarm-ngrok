@@ -20,7 +20,7 @@
           "image": "registry.giantswarm.io/$username/flask-static",
           "ports": ["5000/tcp"],
           "domains": {
-            "timezones.gigantic.io": "5000"
+            "$user-static.gigantic.io": "5000"
           }
         }
       ]
