@@ -83,7 +83,7 @@ There's nothing left to do but push that shizzle:
 Once that completes, you'll need to find the URL for Ngrok:
 
 	cd docker-ngrok
-    swarm logs <instance-id-for-ngrok-component> | grep 
+    swarm logs <instance-id-for-ngrok-component> | grep established
  
 Remember, you can ask *swarm* for info on running services as long as you are in the directory that has a *swarm.json* file in it:
 
