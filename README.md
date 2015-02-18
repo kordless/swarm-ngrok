@@ -106,7 +106,7 @@ Here is an example of logs with the URL in them:
 
 ### Environment Variables
 
-The Giant Swarm software uses environment variables named after the service directives in your **swarm.json** file.  Those variables are made available inside the containers.  Here's an example of how that works inside the shell script for starting Ngrok:
+The Giant Swarm software uses environment variables named after the service directives in your **swarm.json** file.  Those variables are made available inside the containers.  Here's an example of how that works inside [the shell script](https://github.com/kordless/swarm-ngrok/blob/master/docker-ngrok/ngrok_discover) for starting Ngrok:
 
 	$FLASK_PORT_5000_TCP_ADDR
 	$FLASK_PORT_5000_TCP_PORT
