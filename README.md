@@ -1,6 +1,6 @@
 ## Ngrok'n Giant Swarm
 
-This repository contains code and information which will allow you to deploy a static HTML site to [Giant Swarm](https://giantswarm.io/) and then serve the content off an [Ngrok](https://ngrok.com/) URL.  Here's what this looks like:
+This repository contains code and information which will allow you to deploy a static HTML site to [Giant Swarm](https://giantswarm.io/) and then serve the content off an [Ngrok](https://ngrok.com/) URL.  Here's what this looks like from a high level:
 
 ![Fancy diagram.](https://raw.githubusercontent.com/kordless/swarm-ngrok/master/assets/mockup.png)
 
