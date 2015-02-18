@@ -8,4 +8,4 @@ Documentation and video forthcoming, but this should get you going:
 Copy the Ngrok address and use it to access your static files.
 
 ### Video
-![](https://raw.githubusercontent.com/kordless/swarm-ngrok/master/assets/video.png)
+[![](https://raw.githubusercontent.com/kordless/swarm-ngrok/master/assets/video.png)](https://vimeo.com/119916590)
