@@ -51,7 +51,7 @@ Checking again:
 	Current environment: kord/dev
 
 #### Docker + Boot2Docker
-You will need Docker and Boot2Docker installed before you can use the *swarm* command. A [guide is available](https://docs.docker.com/installation/mac/) for installing Boot2Docker on Docker's site.
+You will need Docker and Boot2Docker installed before you can use the *swarm* command. If you have OS X, you can follow along in my new [Boot2Docker Guide](https://github.com/kordless/boot2docker-ing/blob/master/README.md). If not, there is a [guide is available](https://docs.docker.com/installation/mac/) for installing Boot2Docker on Docker's site.
 
 Once you've got it installed, you'll need to start the instance and source the environment variables:
 
