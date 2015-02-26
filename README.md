@@ -59,8 +59,10 @@ Once you've got it installed, you'll need to start the instance and source the e
 	$ boot2docker start
 	$ $(boot2docker shellinit)
 
-I'm still not 100% certain how to get the networking stuff configured correctly for accessing the containers when you launch them locally with boot2docker.  I'll try to get a guide out on that soon!
+You can pull the IP address of the **boot2docker** instance by doing the following:
 
+	$ boot2docker ip
+	
 ### Video Walkthrough
 Here's a quick and dirty walkthough of launching the project on Giant Swarm. As usual, I talk a lot.
 
